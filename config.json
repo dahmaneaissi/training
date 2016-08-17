@@ -1,0 +1,47 @@
+{
+  "sources": {
+    "less": "src/less",
+    "fonts": "src/fonts",
+    "media": "src/media",
+    "vendorScriptsPath": "src/vendors/bower/bootstrap/js",
+    "customScriptsPath": "src/scripts",
+    "templates": "src/templates"
+  },
+  "destination": {
+    "styles": "dist/assets/css",
+    "stylesImages": "dist/assets/css/images",
+    "fonts": "dist/assets/fonts",
+    "scripts": "dist/assets/js",
+    "media": "dist/assets/media",
+    "pages": "dist",
+    "version": "dist/assets"
+  },
+  "theme": {
+    "styles": "path-to-your-app/assets/css",
+    "stylesImages": "path-to-your-app/assets/css/images",
+    "scripts": "path-to-your-app/assets/js",
+    "fonts": "path-to-your-app/assets/fonts",
+    "media": "path-to-your-app/assets/media",
+    "version": "path-to-your-app/assets"
+  },
+  "collections": {
+    "vendorScripts": [
+      "src/vendors/bower/jquery/dist/jquery.js",
+      "src/vendors/bower/bootstrap/js/transition.js",
+      "src/vendors/bower/bootstrap/js/alert.js",
+      "src/vendors/bower/bootstrap/js/button.js",
+      "src/vendors/bower/bootstrap/js/carousel.js",
+      "src/vendors/bower/bootstrap/js/collapse.js",
+      "src/vendors/bower/bootstrap/js/dropdown.js",
+      "src/vendors/bower/bootstrap/js/modal.js",
+      "src/vendors/bower/bootstrap/js/tooltip.js",
+      "src/vendors/bower/bootstrap/js/popover.js",
+      "src/vendors/bower/bootstrap/js/scrollspy.js",
+      "src/vendors/bower/bootstrap/js/tab.js",
+      "src/vendors/bower/bootstrap/js/affix.js"
+    ],
+    "customScripts": [
+      "src/scripts/application.js"
+    ]
+  }
+}

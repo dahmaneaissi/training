@@ -1,0 +1,20 @@
+{
+  "name": "dahmaneaissi/bioshock",
+  "description": "",
+  "authors": [
+    "Dahmane Aissi <aissi.dahmane@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendors/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
