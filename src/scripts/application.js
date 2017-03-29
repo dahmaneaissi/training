@@ -1,4 +1,5 @@
-(function(){
+jQuery( document ).ready(function() {
+
     var element = jQuery('.js-anim');
 
     var tl = new TimelineLite();
@@ -111,7 +112,7 @@
         }
     ).to( ui.lampe , 0.3,
         {
-            scale:"1",
+            scale:"1"
         }
     );
 
@@ -121,4 +122,38 @@
     } , 0.2 )  ;
     dzair.to( ui.roda , 3, {rotation:360, transformOrigin:"50% 50%" , ease:Linear.easeNone, repeat:-1}, 0);
 
-})();
+    var headAnim = new TimelineLite();
+    var profil = jQuery('.profil');
+
+
+    headAnim.fromTo( profil , 0.3, {
+            scale:"0",
+            opacity: 0,
+            transformOrigin:"50% 50%"
+        },
+        {
+            scale:"1.3",
+            opacity: 1
+        }
+    ).to( profil , 0.2,
+        {
+            scale:"1"
+        }
+    );
+
+
+    headAnim.fromTo( profil.find('img') , 0.3, {
+            scale:"0",
+            opacity: 0,
+            transformOrigin:"50% 50%"
+        },
+        {
+            scale:"1",
+            opacity: 1
+        }, 0.1
+    );
+
+    headAnim.to( profil , 0.3, {  x:-100 ,  ease:Back.easeInOut });
+    headAnim.pause();
+    
+});
