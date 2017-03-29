@@ -27,18 +27,8 @@
   "collections": {
     "vendorScripts": [
       "src/vendors/bower/jquery/dist/jquery.js",
-      "src/vendors/bower/bootstrap/js/transition.js",
-      "src/vendors/bower/bootstrap/js/alert.js",
-      "src/vendors/bower/bootstrap/js/button.js",
-      "src/vendors/bower/bootstrap/js/carousel.js",
-      "src/vendors/bower/bootstrap/js/collapse.js",
-      "src/vendors/bower/bootstrap/js/dropdown.js",
-      "src/vendors/bower/bootstrap/js/modal.js",
-      "src/vendors/bower/bootstrap/js/tooltip.js",
-      "src/vendors/bower/bootstrap/js/popover.js",
-      "src/vendors/bower/bootstrap/js/scrollspy.js",
-      "src/vendors/bower/bootstrap/js/tab.js",
-      "src/vendors/bower/bootstrap/js/affix.js"
+      "src/vendors/bower/gsap/src/uncompressed/TimelineLite.js",
+      "src/vendors/bower/gsap/src/uncompressed/TweenMax.js"
     ],
     "customScripts": [
       "src/scripts/application.js"
