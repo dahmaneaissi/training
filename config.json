@@ -28,7 +28,9 @@
     "vendorScripts": [
       "src/vendors/bower/jquery/dist/jquery.js",
       "src/vendors/bower/gsap/src/uncompressed/TimelineLite.js",
-      "src/vendors/bower/gsap/src/uncompressed/TweenMax.js"
+      "src/vendors/bower/gsap/src/uncompressed/TweenMax.js",
+      "src/vendors/bower/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js",
+      "src/vendors/bower/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
     ],
     "customScripts": [
       "src/scripts/application.js"

@@ -122,6 +122,8 @@ jQuery( document ).ready(function() {
     } , 0.2 )  ;
     dzair.to( ui.roda , 3, {rotation:360, transformOrigin:"50% 50%" , ease:Linear.easeNone, repeat:-1}, 0);
 
+
+
     var headAnim = new TimelineLite();
     var profil = jQuery('.profil');
 
@@ -139,10 +141,8 @@ jQuery( document ).ready(function() {
         {
             scale:"1"
         }
-    );
-
-
-    headAnim.fromTo( profil.find('img') , 0.3, {
+    )
+        .fromTo( profil.find('img') , 0.3, {
             scale:"0",
             opacity: 0,
             transformOrigin:"50% 50%"
@@ -151,9 +151,57 @@ jQuery( document ).ready(function() {
             scale:"1",
             opacity: 1
         }, 0.1
-    );
+    )
+        .to( profil , 0.3, { opacity: 0 , x:-200 ,  ease:Back.easeInOut });
 
-    headAnim.to( profil , 0.3, {  x:-100 ,  ease:Back.easeInOut });
-    headAnim.pause();
-    
+    var scrollMagicController = new ScrollMagic.Controller();
+    var scene1 = new ScrollMagic.Scene({
+        triggerElement: '.profil',
+        duration: 300
+    })
+        .setTween(headAnim);
+
+    scrollMagicController.addScene(scene1);
+
+    /*-------------------
+
+
+    ------------------- */
+
+
+    var animElement = jQuery('#svg-mac');
+
+    var screenTimeLine = new TimelineLite();
+
+    var $screen     = animElement.find('#ecran');
+    var $keybord    = animElement.find('#clavier');
+    var $mose       = animElement.find('#layer3');
+
+    screenTimeLine.fromTo( $screen , 0.3 , {
+        autoAlpha : 0,
+        scale : 0.5,
+        transformOrigin:"50% 50%"
+    } , {
+        autoAlpha : 1,
+        scale : 1.2
+    }).to( $screen , 0.2 , {
+        scale : 1
+    } ).from( $keybord , 0.2 , {
+        y : 30,
+        autoAlpha : 0,
+    } , 0.2 ).staggerFrom( $keybord.find('path') , 0.1 , { autoAlpha : 0 }, 0.03 , 0.3 ).from(  $mose , 0.2 ,
+        {
+            autoAlpha : 0,
+            x : -20
+        } , 0.7 );
+
+
+    var scene2 = new ScrollMagic.Scene({
+        triggerElement: '.animscrean',
+        duration: 300
+    })
+        .setTween(screenTimeLine);
+
+    scrollMagicController.addScene(scene2);
+
 });
